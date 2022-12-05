@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Jean-Pierre Mulder</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="clang.html">C</a></li>
+								<li><a href="sql.html">SQL</a></li>
+								<li><a href="webpages.html">HTML, CSS & JS</a></li>
+								<li><a href="flask.html">Flask</a></li>
+								<li><a href="final.html">Final Project</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Python</h2>
+								<p>Finally got to a subject a have much interest in. Everything up to this point has been tough, and extremely enjoyable.</p>
+								<p>Covering week 6, I only included some code from the one problem set done. this is to honour the CS50 
+									<a href="https://cs50.harvard.edu/x/2020/honesty/#:~:text=This%20course's%20philosophy%20on%20academic,submitting%20the%20work%20of%20another.">Academic Honesty</a></p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section>
+										<h2 class="major">Week 6 - Python</h2>
+										<p>The lesson included Python Syntax and the comparable in C. I was introduced to libraries and their uses and why you should use them. We were also provided the documentation to read through if and when you do get stuck.
+											Overall the hand holding started to get way less, but by this this time I was comfortable enough to go and search for the answers... another valuable skill the course teaches you.
+										</p>
+										<p><u>The following problems where included:</u></p>
+										<ul>
+											<li>World Cup - Write a program to run simulations of the FIFA World Cup.</li>
+											<li>Hello - Create a program in Python that greets the user with "Hello, user name"</li>
+											<li>Mario-Less - Implement a program in Python that draws a pyramid</li>
+											<li>Mario-More - Implement a program in Python that draws a left & right facing pyramid, with two spaces in between</li>
+											<li>Cash - Implement a program that first asks the user how much change is owed and then prints the minimum number of coins with which that change can be made</li>
+											<li>Credit - Implement a program that prompts the user for a credit card number and then reports whether it is a valid American Express, MasterCard, or Visa card number</li>
+											<li>Readability - Implement a program that computes the approximate grade level needed to comprehend some text</li>
+											<li>DNA - Implement a program that identifies a person based on their DNA</li>
+										</ul>
+										<blockquote>
+											I enjoyed all of the problems, especially to see how much less code is written in Python compared to C. The mario-more problem, 
+											for example, I used a single line of code to print the entirety of the two pyramids. I included the Credit problem again to compare the differences.
+										</blockquote>
+										<h4>The snippet does the same as in the C version of Credit, this time it is just much less code and more readable</h4>
+										<pre><code>
+# Variable to hold the sum total of the value of all the digits in the card number
+    sum = 0
+    # Loop through the digits in the card number starting with the second from last and iterating through every second digit
+    for digit in card_number[-2::-2]:
+        # Cast the current digit to an integer
+        digit_value = int(digit)
+        # If the digit value multiplied by 2 is more than 9, subtract 9 to emulate adding the two separate digits
+        if digit_value * 2 > 9:
+            sum += (digit_value * 2) - 9
+        else:
+            # Else just add the value of the digit times 2 to the sum
+            sum += (digit_value * 2)
+    # Loop over the digits that has not been added yet
+    for digit in card_number[-1::-2]:
+        digit_value = int(digit)
+        # And add the value to the sum
+        sum += digit_value
+    # If the last digit from sum modulus 10 is equal to 0, the card is valid
+    if sum % 10 == 0:
+        return True
+    else:
+        print("INVALID\n")
+										</code></pre>
+									</section>
+									<br>
+									<a href="clang.html" role="button">Previous</a>
+									<a href="sql.html" role="button" style="float:right">Next</a>
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<p>Contact me if you like what you see. Diligent, eager to learn more each day and expand my knowledge in various development fields. </p>
+						<ul class="contact">
+							<li class="icon solid fa-home">
+								Ruimsig, Johannesburg, South Africa
+							</li>
+							<li class="icon solid fa-envelope"><a href="mailto:jeanpierre.mulder@hotmail.com">jeanpierre.mulder@hotmail.com</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/jean-pierre-mulder-37b5b120a" target="_blank">LinkedIn</a></li>
+							<li class="icon brands fa-github"><a href="https://github.com/JPMulder2003" target="_blank">Github</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Jean-Pierre Mulder All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

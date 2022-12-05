@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Jean-Pierre Mulder</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="clang.html">C</a></li>
+								<li><a href="python.html">Python</a></li>
+								<li><a href="webpages.html">HTML, CSS & JS</a></li>
+								<li><a href="flask.html">Flask</a></li>
+								<li><a href="final.html">Final Project</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>SQL</h2>
+								<p>Structured query language, one of the most used skills for data analysis</p>
+								<p>Covering week 7, I only included some code from the one problem set done. this is to honour the CS50 
+									<a href="https://cs50.harvard.edu/x/2020/honesty/#:~:text=This%20course's%20philosophy%20on%20academic,submitting%20the%20work%20of%20another.">Academic Honesty</a></p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section>
+										<h2 class="major">Week 7 - SQL</h2>
+										<p>
+											The week consisted of SQL, the power and importance of data. Data processing was discussed, cleaning of data, what relational databases are, how to create databases,
+											what the relationship between primary keys, foreign keys are. To me the most valuable part was how to incorporate SQL into Python.
+										</p>
+										<p><u>The following problems where included:</u></p>
+										<ul>
+											<li>Songs - Write SQL queries to answer questions about a database of songs.</li>
+											<li>Movies - Write SQL queries to answer questions about a database of movies.</li>
+											<li>Fiftyville - Write SQL queries to solve a mystery.</li>
+										</ul>
+										<blockquote>
+											All three problems were interesting and provided their own challenges. 
+											I include some queries from Fiftyville as I am proud of how I used the Intersect operator.
+										</blockquote>
+										<h4>The query returns only the common data in all three queries.</h4>
+										<pre><code>											
+SELECT name
+  FROM people
+    JOIN bakery_security_logs
+    ON people.license_plate = bakery_security_logs.license_plate
+  WHERE people.license_plate = bakery_security_logs.license_plate
+    AND year = 2021
+    AND month = 7
+    AND day = 28
+    AND hour = 10
+    AND minute BETWEEN 15 AND 25
+INTERSECT
+SELECT name
+  FROM people
+    JOIN bank_accounts
+    ON people.id = bank_accounts.person_id
+    JOIN atm_transactions
+    ON bank_accounts.account_number = atm_transactions.account_number
+  WHERE year = 2021
+    AND month = 7
+    AND day = 28
+    AND atm_location = "Leggett Street"
+    AND transaction_type = "withdraw"
+INTERSECT
+SELECT name
+  FROM people
+    JOIN phone_calls
+    ON people.phone_number = phone_calls.caller
+  WHERE year = 2021
+    AND month = 7
+    AND day = 28;
+										</code></pre>
+									</section>
+									<br>
+									<a href="python.html" role="button">Previous</a>
+									<a href="webpages.html" role="button" style="float:right">Next</a>
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<p>Contact me if you like what you see. Diligent, eager to learn more each day and expand my knowledge in various development fields. </p>
+						<ul class="contact">
+							<li class="icon solid fa-home">
+								Ruimsig, Johannesburg, South Africa
+							</li>
+							<li class="icon solid fa-envelope"><a href="mailto:jeanpierre.mulder@hotmail.com">jeanpierre.mulder@hotmail.com</a></li>
+							<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/jean-pierre-mulder-37b5b120a" target="_blank">LinkedIn</a></li>
+							<li class="icon brands fa-github"><a href="https://github.com/JPMulder2003" target="_blank">Github</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Jean-Pierre Mulder All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
